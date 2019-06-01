@@ -50,6 +50,16 @@ class LocationsController < ApplicationController
       @location = Location.find(params[:id])
     end
 
+    private
+    def set_trip
+      @trip = current_user.trips.find(params[:id])
+    end
+
+    def trip_params
+      params.require(:trip).permit(:name, :description, :user_id)
+    end
+
+
     def location_params
       params.require(:location).permit(:location_name, :days, :activity, :trip_id)
     end
