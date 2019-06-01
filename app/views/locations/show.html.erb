@@ -23,7 +23,7 @@
 
 <%= link_to  "New Address", new_location_address_path(params[:id]) %>|
 
-<%= link_to  "Address", location_address_path(@location) %>|
+<%= link_to  "Address", location_addresses_path(@location) %>|
 <%= link_to 'Edit', edit_trip_location_path(@location.trip.id, @location.id) %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to 'Back', trip_locations_path(@trip) %>
 

@@ -20,13 +20,12 @@
         <td><%= location.days %></td>
         <td><%= location.activity %></td>
         <td><%= location.trip.name %></td>
-        <td><%= link_to 'Show', location %></td>
+        <td><%# link_to 'Show', trip_location_path(@trip, location) %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-<%= link_to 'New Location', new_trip_location_path(params[:trip_id]) %>
+<%# link_to 'New Location', new_trip_location_path(params[:trip_id]) %>
