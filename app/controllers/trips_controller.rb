@@ -12,18 +12,27 @@ class TripsController < ApplicationController
     @trip = Trip.new
   end
 
+  def create
+    @trip = current_user.trips.new(trip_params)
+    if @trip.save
+      redirect_to trips_path
+    end
+  end
+
   def edit
   end
 
-  def create
-    @trip = Trip.new(trip_params)
-  end
 
   def update
+    if @trip.update(trip_params)
+      redirect_to trips_path
+    else render :edit
+    end
   end
 
   def destroy
     @trip.destroy
+    redirect_to trips_path
   end
 
   private
