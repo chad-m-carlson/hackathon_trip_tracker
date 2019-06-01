@@ -1,6 +1,33 @@
 <h1>Editing Location</h1>
 
-<%= render 'form', location: @location %>
+
+<%= form_with(model: @location, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :location_name %>
+    <%= form.text_field :location_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :days %>
+    <%= form.number_field :days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activity %>
+    <%= form.text_area :activity %>
+  </div>
+  <%= form.hidden_field :trip_id, value: @location.trip_id%>
+  <!-- <div class="field">
+    <%= form.label :trip_id %>
+    <%= form.text_field :trip_id %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
 
 <%= link_to 'Show', @location %> |
 <%= link_to 'Back', locations_path %>
