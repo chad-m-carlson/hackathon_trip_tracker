@@ -15,5 +15,9 @@
   <%= @trip.user %>
 </p>
 
+ <% if @trip.locations == 0%>
+    <%= button_to "Add A Location", new_trip_location_path(@trip), method: :get, class: "ui button" %>
+  <% else%>
+
 <%= link_to 'Edit', edit_trip_path(@trip) %> |
 <%= link_to 'Back', trips_path %>
