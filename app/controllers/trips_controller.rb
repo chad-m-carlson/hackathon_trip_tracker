@@ -10,6 +10,7 @@ class TripsController < ApplicationController
 
   def new
     @trip = Trip.new
+    new_trip_path
   end
 
   def create

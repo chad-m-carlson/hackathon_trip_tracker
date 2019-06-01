@@ -13,8 +13,6 @@ class LocationsController < ApplicationController
     @trip = Trip.find(params[:trip_id])
   end
   
-  def edit
-  end
   
   def create
     @location = Location.new(location_params)
@@ -23,6 +21,10 @@ class LocationsController < ApplicationController
     else
       render :new
     end
+  end
+  
+  def edit
+
   end
 
   def update
