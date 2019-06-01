@@ -1,18 +1,10 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cdce5c34ffd93ab523530119235b88ba17291cf
   def index
     @locations = Location.all
   end
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7cdce5c34ffd93ab523530119235b88ba17291cf
   def show
   end
 
