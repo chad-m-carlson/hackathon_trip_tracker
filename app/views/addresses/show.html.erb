@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -40,5 +41,5 @@
   <%= @address.location %>
 </p>
 
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+<%=link_to 'Edit', edit_location_address_path(params[:id],@address) %> |
+<%# link_to 'Back', addresses_path %>
