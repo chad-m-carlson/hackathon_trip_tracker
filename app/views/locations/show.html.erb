@@ -19,9 +19,11 @@
   <strong>Trip:</strong>
   <%= @location.trip.id %>
 </p>
+
+
 <%= link_to  "New Address", new_location_address_path(params[:id]) %>|
 
 <%= link_to  "Address", location_address_path(@location) %>|
-<%= link_to 'Edit', edit_location_path(@location[:trip_id], @location) %> |
+<%= link_to 'Edit', edit_trip_location_path(@location.trip.id, @location.id) %> |
 <%= link_to 'Back', locations_path %>
 
