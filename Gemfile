@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 gem 'semantic-ui-sass'
+gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem 'devise'
 gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'

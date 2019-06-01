@@ -1,7 +1,10 @@
 
-<div class= "ui center algined padded grid">
+<div class="sign-in-container">
+<div class= "ui padded grid">
 <div class="sixteen wide center aligned column">
 <%# <div class="ui segment"> %>
+<span class="logo-span"><i class="far fa-paper-plane fa-5x"></i><h1 class="logo-header">Wanderlist</h1></span>
+
 <h2 class="ui header huge">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -29,5 +32,6 @@
 
 <%= render "devise/shared/links" %>
 <%# </div> %>
+</div>
 </div>
 </div>
