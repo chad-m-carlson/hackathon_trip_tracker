@@ -1,31 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Trips</h1>
+<h1 class="ui centered header">Trips</h1>
+<hr>
+<div class="ui grid">
+<% @trips.each do |trip|%>
+  <div class="four wide column">
+    <div class= "ui raised card">
+    <div class="content">
+      <div class="ui centered header"><%= trip.name %></div>
+      <div class="description">
+      <%= trip.description %>
+      <br>
+      <div class= "ui three tiny buttons">
+        <%= link_to 'Show', trip_path(trip), class:"ui button" %> |
+        <%= link_to 'Edit', edit_trip_path(trip), class: "ui button" %>|
+       <%= link_to 'Delete', trip_path(trip), method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button"%> 
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+ <%end%>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @trips.each do |trip| %>
-      <tr>
-        <td><%= trip.name %></td>
-        <td><%= trip.description %></td>
-        <td><%= trip.user.id %></td>
-        <td><%= link_to 'Show', trip_path(trip) %></td>
-        <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
-        <td><%= link_to 'Destroy', @trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Trip', new_trip_path %>

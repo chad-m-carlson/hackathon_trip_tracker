@@ -3,7 +3,7 @@
 
   <div class="right menu">
 
-
+      <%= link_to '+ New Trip', new_trip_path, class:"item"%>
       <%= current_user ? (link_to  "Log out", destroy_user_session_path, method: :delete, class: "item") : nil %>
 
   </div>
