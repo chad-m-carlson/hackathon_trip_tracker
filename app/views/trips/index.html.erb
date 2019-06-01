@@ -14,7 +14,7 @@
       <div class= "ui three tiny buttons">
         <%= link_to 'Show', trip_path(trip), class:"ui button" %> |
         <%= link_to 'Edit', edit_trip_path(trip), class: "ui button" %>|
-       <%= link_to 'Delete', @trip, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button"%> 
+       <%= link_to 'Delete', trip_path(trip), method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button"%> 
       </div>
       </div>
     </div>

@@ -27,7 +27,7 @@ class AddressesController < ApplicationController
   end
 
   def update
-    if @address.save
+    if @address.update(address_params)
       redirect_to location_addresses_path(@location)
     else
       render :edit
