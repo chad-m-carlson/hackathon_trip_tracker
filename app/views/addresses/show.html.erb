@@ -42,4 +42,5 @@
 </p>
 
 <%=link_to 'Edit', edit_location_address_path(params[:id],@address) %> |
+<%= link_to  "Delete Address", location_address_path(@address), method: :delete %>
 <%# link_to 'Back', addresses_path %>

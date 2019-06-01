@@ -24,6 +24,8 @@ class AddressesController < ApplicationController
   end
 
   def destroy
+    @address.destroy
+    redirect_to locations_path
   end
 
   private
