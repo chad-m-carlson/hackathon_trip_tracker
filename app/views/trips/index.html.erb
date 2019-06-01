@@ -17,10 +17,10 @@
       <tr>
         <td><%= trip.name %></td>
         <td><%= trip.description %></td>
-        <td><%#= trip.user.id %></td>
-        <td><%= link_to 'Show', trip, class: "ui button"%></td>
+        <td><%= trip.user.id %></td>
+        <td><%= link_to 'Show', trip_path(trip), class:"ui button" %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip), class: "ui button" %></td>
-        <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button"%></td>
+        <td><%= link_to 'Destroy', @trip, method: :delete, data: { confirm: 'Are you sure?' }, class: "ui button"%></td>
       </tr>
     <% end %>
   </tbody>

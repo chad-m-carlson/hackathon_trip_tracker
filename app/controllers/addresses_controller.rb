@@ -10,7 +10,7 @@ class AddressesController < ApplicationController
   end
 
   def new
-    @address = @location.create_address
+    @address = @location.address.new
   end
 
   def edit
@@ -19,9 +19,19 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.new(address_params)
+    if @address.save
+      redirect_to location_address_path(@location, @address)
+    else
+      render :new
+    end
   end
 
   def update
+    if @address.save
+      redirect_to location_addresses_path(@location)
+    else
+      render :edit
+    end
   end
 
   def destroy
