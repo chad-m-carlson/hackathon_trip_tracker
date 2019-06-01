@@ -1,11 +1,22 @@
 require 'faker'
-
+description_seeds = [
+  'Reunion Trip',
+  'Beach Vacation',
+  'Mountain hike',
+  'Scandanavian Adventure',
+  'Mecca',
+  'Run with the Bulls',
+  'Uneventful Events',
+  'Eurovan trip',
+  'Snorkeling',
+  'Japan visit'
+  ]
 
 10.times do |index|
   Trip.create!(
   
     name: "Going " + Faker::Compass.direction,
-    description: Faker::Lorem.sentence(2),
+    description: description_seeds.sample(1),
     user_id: 1
   )
 end
