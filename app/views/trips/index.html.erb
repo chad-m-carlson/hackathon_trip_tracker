@@ -18,9 +18,9 @@
         <td><%= trip.name %></td>
         <td><%= trip.description %></td>
         <td><%= trip.user.id %></td>
-        <td><%= link_to 'Show', trip %></td>
+        <td><%= link_to 'Show', trip_path(trip) %></td>
         <td><%= link_to 'Edit', edit_trip_path(trip) %></td>
-        <td><%= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', @trip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

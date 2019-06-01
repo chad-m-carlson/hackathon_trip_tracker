@@ -6,6 +6,7 @@ class LocationsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
